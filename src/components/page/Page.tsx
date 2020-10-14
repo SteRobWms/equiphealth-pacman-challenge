@@ -5,30 +5,30 @@ import { makeStyles, Theme } from '@material-ui/core/styles';
 import Nav from './Nav';
 
 interface PageProps {
-  children: React.ReactNode | React.ReactNode[];
+    children: React.ReactNode | React.ReactNode[];
 }
 
 const useStyles = makeStyles((theme: Theme) => ({
-  window: {
-    minHeight: '100vh',
-    paddingTop: 64 + theme.spacing(2),
-  },
+    window: {
+        minHeight: '100vh',
+        paddingTop: 64 + theme.spacing(2),
+    },
 }));
 
 const Page: React.FC<PageProps> = ({
-  children,
+    children,
 }): JSX.Element => {
-  
-  const styles = useStyles({});
 
-  return (
-    <>
-      <Nav />
-      <div className={styles.window}>
-        <Container>{children}</Container>
-      </div>
-    </>
-  );
+    const styles = useStyles({});
+
+    return (
+        <>
+            <Nav />
+            <div className={styles.window}>
+                <Container>{children!}</Container>
+            </div>
+        </>
+    );
 };
 
 export default Page;

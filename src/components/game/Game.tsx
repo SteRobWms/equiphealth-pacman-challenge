@@ -30,7 +30,7 @@ const Game: React.FC<GameProps> = ({ dispatch, layout, score, runningScore, iter
 
     //SRW update tic interval for testing
     useEffect(() => {
-        setInterval(() => { dispatch(tic()); }, 1);
+        setInterval(() => { dispatch(tic()); }, 250);
     }, [dispatch]);
 
     return (

@@ -159,7 +159,8 @@ class Pacman extends Item implements GameBoardItem {
 
                     /** SUPERPACMAN RULES
                      *  Make logic for pursuit of ghost if SuperPacman
-                     *  Scared ghosts move once every 2 tics */
+                     *  Scared ghosts move once every 2 tics
+                     *  So it takes SuperPacman between 1 & 2 tics to close a 1 distance gap */
                     else if (this.pillTimer.timer > 0 && distanceToGhost * 1.5 <= this.pillTimer.timer) {
                         return { piece: move, direction: GameDirectionMap[idx] };
                     }
